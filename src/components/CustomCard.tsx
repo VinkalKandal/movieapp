@@ -38,13 +38,22 @@ const CustomCard: FC<CardProps> = ({ title, posterImage }) => {
         />
       </StyledCardContainer>
       <Typography
-        fontFamily="Titillium Web"
-        color="#FFFFFF"
-        textAlign="left"
-        sx={{ mt: 1, mb: 1 }}
-      >
-        {title}
-      </Typography>
+  fontFamily="Titillium Web"
+  color="#FFFFFF"
+  textAlign="left"
+  sx={{
+    mt: 1,
+    mb: 1,
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    display: '-webkit-box',
+    WebkitLineClamp: 2, 
+    WebkitBoxOrient: 'vertical',
+  }}
+>
+  {title}
+</Typography>
+
     </>
   );
 };
